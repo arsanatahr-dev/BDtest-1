@@ -33,7 +33,7 @@ video {
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <script>
 var video = document.getElementById('video');
-var videoSrc = 'https://pelindung.bandung.go.id:3443/video/DPU/cingised.m3u8';
+var videoSrc = 'src="https://www.youtube.com/embed/YLy7ntKXw-w?autoplay=1&amp;mute=1"';
 
 if (Hls.isSupported()) {
   var hls = new Hls();
