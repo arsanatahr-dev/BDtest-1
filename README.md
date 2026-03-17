@@ -15,34 +15,23 @@ html, body {
   width: 100%;
   max-width: 480px; 
   aspect-ratio: 16/9;
-  background: transparent;
 }
-video {
+iframe {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  border: none;
 }
 </style>
 </head>
 <body>
 
 <div class="video-container">
-  <video id="video" autoplay muted playsinline></video>
+  <iframe 
+    src="https://www.youtube.com/embed/YLy7ntKXw-w?autoplay=1&mute=1&controls=1&rel=0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<script>
-var video = document.getElementById('video');
-var videoSrc = 'https://www.youtube.com/embed/YLy7ntKXw-w?autoplay=1&amp;mute=1';
-
-if (Hls.isSupported()) {
-  var hls = new Hls();
-  hls.loadSource(videoSrc);
-  hls.attachMedia(video);
-} else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-  video.src = videoSrc;
-}
-</script>
 
 </body>
 </html>
